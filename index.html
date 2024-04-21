@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-        body {
+        body{
             background-color: #4158D0;
             background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
@@ -18,37 +18,72 @@
         img {
             display: block;
             width: 100%;
-            border: 2px dashed pink;
+            
             margin: 0 auto;
         }
 
-        .con{
-            margin-top: 50px;
+        .button_container{
             
+            
+          margin-top: 305px;
+            
+            
+        
+            
+            display: block;
+            
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            
+
+        }
+        .btn{
             background-color: #00DBDE;
             background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
-            width: fit-content;
+            margin-top: 52px;
             width: 10%;
-            display: block;
-            display: flex;
-            gap: 20px;
-            margin: auto;
-
+            min-width: 100px;
+        
+            
+        }
+        .btn1{
+            
+            
         }
     </style>
 </head>
 
 <body>
-    <h1 class="container">Bulb toggler</h1>
-    <div class="container row">
-        <img src="light-bulb.png" alt="" class="col-md-6 ">
+    
+
+    
+    <div class=" row ">
+        <marquee behavior="" direction="right"><h1 class="container">Bulb toggler</h1></marquee>
+
+        <img src="lightbulb.png" alt="" class="image-fluid  text-center col-md-4 " id="id">
+        <div class="button_container col">
+            <button onclick="onBulb()" class="btn ">On</button>
+            <button onclick="offBulb()" class="btn btn1">Off</button>
+        </div>
         
 
     </div>
-    <div class="d-flex d-block">
-        <button onclick="onBulb()" class="con p-2">On</button>
-        <button onclick="offBulb()" class="con p-2">Off</button>
-    </div>
+    
+    <script>
+        function onBulb(){
+            const lightElement=document.getElementById("id");
+            lightElement.src="light-bulb.png"
+        }
+        function offBulb(){
+            const lightElement=document.getElementById("id");
+            lightElement.src="lightbulb.png"
+        }
+
+    </script>
+    
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
